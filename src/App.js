@@ -10,7 +10,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+  apiKey: "AIzaSyB4UN3nst1WLILNcLnjPmrfwAHcgpmo6zM",
+  authDomain: "lunaticchatroom.firebaseapp.com",
+  databaseURL: "https://lunaticchatroom-default-rtdb.firebaseio.com",
+  projectId: "lunaticchatroom",
+  storageBucket: "lunaticchatroom.appspot.com",
+  messagingSenderId: "1015861532385",
+  appId: "1:1015861532385:web:6622ca215026250972c9a0",
+  measurementId: "G-WHGGZNNLMW"
 })
 
 const auth = firebase.auth();
