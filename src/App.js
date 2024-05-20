@@ -10,7 +10,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+  apiKey: "AIzaSyB4UN3nst1WLILNcLnjPmrfwAHcgpmo6zM",
+  authDomain: "lunaticchatroom.firebaseapp.com",
+  databaseURL: "https://lunaticchatroom-default-rtdb.firebaseio.com",
+  projectId: "lunaticchatroom",
+  storageBucket: "lunaticchatroom.appspot.com",
+  messagingSenderId: "1015861532385",
+  appId: "1:1015861532385:web:6622ca215026250972c9a0",
+  measurementId: "G-WHGGZNNLMW"
 })
 
 const auth = firebase.auth();
@@ -25,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>Lunate Chat</h1>
         <SignOut />
       </header>
 
@@ -47,7 +54,7 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
+      <p>Dont be weird in the chat</p>
     </>
   )
 
@@ -99,7 +106,7 @@ function ChatRoom() {
 
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-      <button type="submit" disabled={!formValue}>🕊️</button>
+      <button type="submit" disabled={!formValue}>Send</button>
 
     </form>
   </>)
